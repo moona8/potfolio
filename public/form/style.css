@@ -1,0 +1,43 @@
+.container {
+    max-width: 960px;
+    margin:auto
+  }
+  .myContainer{
+    width: 50%;
+    margin: auto;
+  }
+  .blue {
+    background-color: #1f7996;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+  }
+  .blue-link{
+   color:#155d74;
+   font-size: 18px;
+  }
+  .blue:hover{
+    color: white;
+    background-color: #155d74;
+  }
+  #fnameError{
+    color: red;
+    font-size: 12px;
+  }
+  #lnameError{
+    color: red;
+    font-size: 12px;
+  }
+  #emailError{
+    color: red;
+    font-size: 12px;
+  }
+  #contactError{
+    color: red;
+    font-size: 12px;
+  }
+  #perror{
+    color: red;
+    font-size: 12px;
+  }

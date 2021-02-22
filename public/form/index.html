@@ -1,0 +1,140 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>form validation</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <!-- Header ----------------------------------------------------------------------------------->
+    <div class="blue">
+      <nav class="navbar navbar-light mycontainer justify-content-between ">
+        <a class="navbar-brand white">Form</a>
+        <form class="form-inline">
+          <ul class="nav nav-pills">
+            <li class="nav-item" style="margin-right: 15px;" >
+              <a class="nav-link btn btn-outline-warning" aria-current="page" href="data.html">View Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-warning" aria-current="page" href="../index.html">portfolio</a>
+            </li>
+            </a>
+            </ul>
+        </form>
+      </nav>
+    </div>
+      <!-- Header End ----------------------------------------------------------------------------------->
+  
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <!-- <img class="d-block mx-auto mb-4" src="./img/user-male-circle.png" alt="" width="100" height="100"> -->
+      <h2>Registration form ES6</h2>
+      <p class="lead">All the details of this assignment is provided on my github account where you can understand and download the source code of this assignment.</p>
+    </div>
+
+    <div class="row g-3">
+      <div class="col">
+        <h4 class="mb-3">Get Registered</h4>
+        <form class="needs-validation"  onsubmit="RegisterUser(); return false">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" onblur="validateInput()" id="firstName" placeholder="first name" required>
+              <span id="fnameError"></span>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control"  onblur="validateInput()" id="lastName" placeholder="last name"  required>
+              <span id="lnameError"></span>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <div class="input-group">
+                <span class="input-group-text">@</span>
+                <input type="email" class="form-control" onblur="validateInput()" id="email" placeholder="you@example.com" required>
+                <span id="emailError"></span>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="number" class="form-label">Contact No</label>
+              <input type="tel"  class="form-control" onblur="validateInput()" maxlength="11" id="number" placeholder="03340000000" required>
+              <span id="contactError"></span>
+            </div>
+            
+
+            <div class="col-md-6">
+              <label for="password" class="form-label">password</label>
+              <input type="password"  class="form-control" onblur="validateInput()" id="password" placeholder="password" required>
+              <input type="checkbox" onclick="showPassword()"> Show Password
+              <span id="perror"></span>
+            </div>
+            
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" onchange="document.getElementById('submit_button').disabled = !this.checked;" class="form-check-input" id="saveInfo">
+            <label class="form-check-label" for="saveInfo"> I Agree to save this information for next time</label>
+          </div>
+          <span class="text-muted" style="font-size: 12px;">*you should Agree otherwise you can't proceed for registration</span>
+          <br><br>
+          <button id="submit_button"  class="w-100 btn blue btn-lg" disabled type="submit">Continue to Sign Up</button>
+        </form>
+      </div>
+    </div>
+   
+    <a class="text-center nav-link blue-link" aria-current="page" href="login.html">Don't have an Account? Sign In</a>
+  </main>
+<br><br>
+</div>
+
+
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+
+      <script src="form-validation.js"></script>
+  </body>
+</html>
